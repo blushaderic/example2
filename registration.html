@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <form id="registrationform">
+        <label for="fullname">Full name:</label>
+        <input type="text" id="fullname" name="fullname" required><br>
+        <input type="submit" value="Register">
+
+    </form>
+    <div id="successmsg" style="display:none">
+        <p>Registration Successful!</p>
+    </div>
+    <script>
+        document.getElementById("registrationform").addEventListener("submit",function(even){
+            even.preventDefault();
+            document.getElementById("successmsg").style.display="block";
+            
+        });
+    </script>
+</body>
+</html>
